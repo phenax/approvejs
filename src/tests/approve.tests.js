@@ -2,6 +2,16 @@ import cc from './approve.creditcard';
 import strength from './approve.strength';
 
 export default {
+
+    fixedSizeNumeric: {
+        regex:  /[0-9 -()+]+$/,
+        validate: function(num) {
+            return (num.number.length === num.length) && (this.regex.test(num.number));
+        },
+        message: '{title} is not valid',
+        expects: false
+    },
+
     /**
      * Checks if a value is present.
      */
