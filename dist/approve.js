@@ -280,11 +280,13 @@ var tests = {
 	},
 
 	username: {
-		validate: function(uname, pars) {
-			return uname && (uname.length > pars.min) && (uname.indexOf('@') === -1);
+		regex: /[@]+/gi,
+		validate: function(uname) {
+			uname= uname || '';
+			return !this.regex.test(uname);
 		},
 		message: '{title} is not a valid username',
-		expects: [ 'min' ],
+		expects: false,
 	},
 
 	/**
