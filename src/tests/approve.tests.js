@@ -194,10 +194,7 @@ export default {
 		},
 		message: '{title} is not a valid time',
 		expects: false
-	},
-	/**
-	 * Checks if a value is a valid date.
-	 */
+	},/*
 	date: {
 		formats: {
 			ymd: /^(?:\2)(?:[0-9]{2})?[0-9]{2}([\/-])(1[0-2]|0?[1-9])([\/-])(3[01]|[12][0-9]|0?[1-9])$/,
@@ -208,7 +205,7 @@ export default {
 		},
 		message: '{title} is not a valid date',
 		expects: ['format']
-	},
+	},*/
 	/**
 	 * Checks if a value is truthy ('yes', 'true', 'ok[ay]', '1').
 	 */
